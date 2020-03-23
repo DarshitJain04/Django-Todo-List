@@ -1,7 +1,62 @@
-<p>Are you sure you want to delete '{{item}}' ?</p>
+<!DOCTYPE html>
+<html lang="en">
 
-<a href="{% url 'tasks' %}">Cancel</a>
-<form method="POST" action="">
-	{% csrf_token %}
-	<input type="submit" name="Confirm">
-</form>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Delete</title>
+	<style>
+		body {
+			background-color: #6A89CC;
+		}
+
+		#para {
+			background-color: #3498DB;
+			text-align: center;
+			font-size: 25px;
+		}
+
+		.href {
+			font-size: 20px;
+			text-align: center;
+			left: 50%;
+			background-color: #74B9FF;
+		}
+
+		.href:hover {
+			background-color: #FF3031;
+			color: aliceblue;
+		}
+
+		.form {
+			font-size: 20px;
+			text-align: center;
+			left: 50%;
+			background-color: #74B9FF;
+			margin-top: 10px;
+		}
+
+		#submit {
+			font-size: 21px;
+		}
+
+		#submit:hover {
+			opacity: 0.8;
+		}
+	</style>
+</head>
+
+<body>
+	<p id='para'>Are you sure you want to delete <span id='span'>'{{item}}'</span> ?</p>
+	<div class="href">
+		<a href="{% url 'tasks' %}" id="href">Cancel
+		</a>
+	</div>
+
+	<form method="POST" action="" id="form1" class="form">
+		{% csrf_token %}
+		<input type="submit" name="Confirm" id="submit">
+	</form>
+</body>
+
+</html>

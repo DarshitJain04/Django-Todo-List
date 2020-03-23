@@ -1,8 +1,181 @@
-<h1>Update Task</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<form method="POST" action="">
-	{% csrf_token %}
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Update</title>
+	<style>
+		.comp1 {
+			position: absolute;
+			width: auto;
+			height: auto;
+			left: 0%;
+			right: 0%;
+			top: 0.2%;
+			bottom: 0%;
 
-	{{form}}
-	<input type="submit" name="Update Task">
-</form>
+			background: #6A89CC;
+		}
+
+		.comp2 {
+			width: 831px;
+			height: 600px;
+			position: absolute;
+			left: 22%;
+			right: 12.15%;
+			top: 0%;
+			bottom: 0.2%;
+			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.75);
+			margin-top: 23px;
+
+			background: #906abd;
+			border-radius: 10px;
+		}
+
+		h1 {
+			position: absolute;
+			left: 32.61%;
+			right: 29.6%;
+			top: 4.47%;
+			bottom: 79.47%;
+
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 48px;
+			line-height: 56px;
+			text-align: center;
+
+			color: #000000;
+		}
+
+		.title {
+			position: absolute;
+			left: 50%;
+			right: 3.25%;
+			top: 24.8%;
+			bottom: 63.62%;
+			font-size: 25px;
+			background: #C4C4C4;
+			border-radius: 18px;
+			padding: 0px 40px 0px 40px;
+		}
+
+		#submit {
+			position: absolute;
+			left: 45%;
+			/* right: 28.76%; */
+			top: 78.46%;
+			bottom: 5.89%;
+
+			background: #C4C4C4;
+			border-radius: 30px;
+			font-size: 20px;
+			/* margin: 2px 4px 2px 4px; */
+			padding: 2px 40px 2px 40px;
+		}
+
+		#submit:hover {
+			opacity: 0.7;
+		}
+
+		#id_created {
+			position: absolute;
+			left: 50%;
+			right: 16.49%;
+			top: 58.13%;
+			bottom: 30.28%;
+			font-size: 25px;
+			background: #C4C4C4;
+			border-radius: 20px;
+			padding: 0px 40px 0px 40px;
+		}
+
+		input[type="checkbox"] {
+			width: 30px;
+			/*Desired width*/
+			height: 30px;
+			/*Desired height*/
+			position: absolute;
+			left: 50.06%;
+			right: 45.49%;
+			top: 43.29%;
+			bottom: 49.8%;
+		}
+
+		label[for="id_complete"] {
+			position: absolute;
+			left: 14.32%;
+			right: 53.31%;
+			top: 42.29%;
+			bottom: 45.53%;
+
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 36px;
+			line-height: 42px;
+			text-align: center;
+
+			color: #000000;
+		}
+
+		label[for="id_title"] {
+			position: absolute;
+			left: 17.81%;
+			right: 57.88%;
+			top: 27%;
+			bottom: 60.98%;
+
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 36px;
+			line-height: 42px;
+			text-align: center;
+
+			color: #000000;
+		}
+
+		label[for="id_created"] {
+			position: absolute;
+			left: 21.06%;
+			right: 59.45%;
+			top: 60.16%;
+			bottom: 28.25%;
+
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 36px;
+			line-height: 42px;
+			text-align: center;
+
+			color: #000000;
+
+		}
+	</style>
+</head>
+
+<body>
+	<div class="comp1">
+		<div class="comp2">
+			<h1>Update Task</h1>
+
+			<form method="POST" action="">
+				{% csrf_token %}
+
+				{{form}}
+				<input type="submit" name="Update Task" id="submit">
+			</form>
+		</div>
+	</div>
+
+
+
+
+
+</body>
+
+</html>
